@@ -1,0 +1,43 @@
+/*=======================
+GENERAL STYLES
+=======================*/
+* {
+  box-sizing: border-box;
+  color: #60a7d8;
+  font-size: 1rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*=======================
+MAIN STYLES
+=======================*/
+main {
+  width: 100%
+}
+.product {
+  border: 1px solid #60a7d8;
+  width: 20%;
+  height: 320px;
+}
+
+section {
+  display: flex;
+}
+
+.item {
+  width: 20%;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*border-top: 1px solid #60a7d8;
+  border-right: 1px solid #60a7d8;
+  display: flex;
+  justify-content: space-between;
+  display: inline-block;
+  list-style: none;*/
+}
