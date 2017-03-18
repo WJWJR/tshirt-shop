@@ -4,12 +4,14 @@ GENERAL STYLES
 * {
   box-sizing: border-box;
   color: #60a7d8;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
 }
 
 img {
   width: 100%;
   height: auto;
+  padding: 5px;
 }
 
 /*=======================
@@ -18,26 +20,78 @@ MAIN STYLES
 main {
   width: 100%
 }
+
 .product {
-  border: 1px solid #60a7d8;
-  width: 20%;
-  height: 320px;
+  border-top: 2px solid #60a7d8;
+  border-left: 2px solid #60a7d8;
+  border-right: 2px solid #60a7d8;
+}
+
+.product, section, footer {
+  width: 33%;
+  height: auto;
+  padding: 0px;
+}
+
+.flip {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flip:hover .fa {
+  background-color: #60a7d8;
+  -webkit-text-fill-color: #5ca4d6;
+   -webkit-text-fill-width: 2px;
+   -webkit-text-fill-color: #fff;
+}
+
+.fa-repeat {
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  padding: 10px;
 }
 
 section {
   display: flex;
 }
 
+.item:hover, .size:hover{
+background-color: #60a7d8;
+-webkit-text-fill-color: #5ca4d6;
+ -webkit-text-fill-width: 2px;
+ -webkit-text-fill-color: #fff;
+}
+
+
+.item:hover .fa-stop{
+  -webkit-text-fill-color: #60a7db;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: #fff;*/
+}
+
+.item:hover .fa-shopping-cart {
+  -webkit-text-fill-color: #81bce5/*#60a7db*/;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: #fff;
+}
+
+
 .item {
   width: 20%;
-  border: 1px solid;
+  height: auto;
+  border: 2px solid;
   display: flex;
   align-items: center;
   justify-content: center;
-  /*border-top: 1px solid #60a7d8;
-  border-right: 1px solid #60a7d8;
+  padding: 10px;
+}
+
+footer {
+  padding: 10px;
   display: flex;
   justify-content: space-between;
-  display: inline-block;
-  list-style: none;*/
+}
+
+.price {
+  font-weight: 600;
 }
