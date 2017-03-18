@@ -8,11 +8,28 @@ GENERAL STYLES
   font-family: 'Open Sans', sans-serif;
 }
 
-img {
+img svg {
   width: 100%;
   height: auto;
   padding: 5px;
 }
+
+.blue {
+  color: #80bb35;
+}
+
+.green {
+  color: #8bb992;
+}
+
+.item .purple {
+  color: #d48299;
+}
+
+.orange {
+  color: #dcb07d;
+}
+
 
 /*=======================
 MAIN STYLES
@@ -76,7 +93,7 @@ background-color: #60a7d8;
 }
 
 
-.item {
+.item  {
   width: 20%;
   height: auto;
   border: 2px solid;
@@ -84,6 +101,12 @@ background-color: #60a7d8;
   align-items: center;
   justify-content: center;
   padding: 10px;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+ {
+  width: 20%;
+  height: auto;
 }
 
 footer {
@@ -94,4 +117,56 @@ footer {
 
 .price {
   font-weight: 600;
+}
+
+
+/*============================
+DROP-UP MENU
+=============================*/
+/*. {
+  position: relative;
+  display: inline-block;
+}*/
+
+.dropup-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 2px solid #60a7d8;
+  min-width: 86px;
+  height: auto;
+  z-index: 1;
+  top: 118%; /*361px*/
+  transition-duration: 3s;
+}
+
+.dropup-content::after {
+  content: "";
+  width: 0;
+  height: 0;
+  top: 100%;
+  left: 30%;
+  bottom: 50px;
+  position: absolute;
+  border-left: 16px solid transparent;
+  border-top: 10px solid #fff;
+  border-right: 16px solid transparent;
+}
+
+.dropset {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+}
+
+.drop-item .fa-stop {
+  font-size: 1.8rem;
+}
+
+.item:hover .dropup-content {
+  display: block;
+}
+
+.dropup-content::after .purple {
+  color: #d48299;
 }
