@@ -8,27 +8,21 @@ GENERAL STYLES
   font-family: 'Open Sans', sans-serif;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+/* Not sure why this is not working
 img svg {
   width: 100%;
   height: auto;
-  padding: 5px;
-}
+  margin: 0px auto;
+  padding: 20px;
+}*/
 
-.blue {
-  color: #80bb35;
-}
-
-.green {
-  color: #8bb992;
-}
-
-.item .purple {
-  color: #d48299;
-}
-
-.orange {
-  color: #dcb07d;
-}
 
 
 /*=======================
@@ -47,7 +41,7 @@ main {
 .product, section, footer {
   width: 33%;
   height: auto;
-  padding: 0px;
+  padding: 0px
 }
 
 .flip {
@@ -72,27 +66,6 @@ section {
   display: flex;
 }
 
-.item:hover, .size:hover{
-background-color: #60a7d8;
-/*-webkit-text-fill-color: #5ca4d6;*/
- -webkit-text-fill-width: 2px;
- /*-webkit-text-fill-color: #fff;*/
-}
-
-
-.item:hover .fa-stop{
-  /*-webkit-text-fill-color: #60a7db;
-   -webkit-text-stroke-width: 2px;
-   -webkit-text-stroke-color: #fff;*/
-}
-
-.item:hover .fa-shopping-cart {
-  -webkit-text-fill-color: #81bce5/*#60a7db*/;
-   -webkit-text-stroke-width: 2px;
-   -webkit-text-stroke-color: #fff;
-}
-
-
 .item  {
   width: 20%;
   height: auto;
@@ -102,11 +75,8 @@ background-color: #60a7d8;
   justify-content: center;
   padding: 10px;
   cursor: pointer;
-  transition-duration: .5s;
-}
- {
-  width: 20%;
-  height: auto;
+  /*transition-duration: .5s;*/
+  position: relative;
 }
 
 footer {
@@ -129,28 +99,46 @@ DROP-UP MENU
 }*/
 
 .dropup-content {
-  display: none;
-  position: absolute;
+  display: none;*/
   background-color: #fff;
   border: 2px solid #60a7d8;
-  min-width: 86px;
   height: auto;
   z-index: 1;
-  top: 118%; /*361px*/
-  transition-duration: 3s;
+  /*transition-duration: 3s;*/
+}
+.item:hover{
+  background-color: #60a7d8;
 }
 
-.dropup-content:after {
-  content: "";
+
+ /* {
+  background-color: #fff;
+}*/
+
+/*.arrow-down {
   width: 0;
   height: 0;
-  top: 100%;
-  left: 30%;
-  bottom: 50px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #fff;
   position: absolute;
-  border-left: 16px solid transparent;
-  border-top: 10px solid #fff;
-  border-right: 16px solid transparent;
+  top: 90px;
+}*/
+
+.size .dropup-content {
+  position: absolute;
+  top:-312px;
+  left: -2px;
+  width: 82px;
+  background-color: #fff;
+}
+
+.colors .dropup-content {
+  position: absolute;
+  top: -92px;
+  left: -1px;
+  width: 82px;
+  background-color: #fff;
 }
 
 .dropset {
@@ -167,6 +155,32 @@ DROP-UP MENU
   display: block;
 }
 
-.dropup-content::after .purple {
+.dropup-content::after {
   color: #d48299;
+}
+/*=====================
+XL TSHIRT DROP-UP
+=======================*/
+/*.mock img{
+  width: 20%;
+}*/
+
+
+/*=====================
+.COLORS DROP-UP COLORS
+=====================*/
+.blue {
+  color: #;
+}
+
+.green {
+  color: #8bb992;
+}
+
+.item .purple {
+  color: #d48299;
+}
+
+.orange {
+  color: #dcb07d;
 }
