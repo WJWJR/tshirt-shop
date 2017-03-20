@@ -74,14 +74,14 @@ section {
 
 .item:hover, .size:hover{
 background-color: #60a7d8;
--webkit-text-fill-color: #5ca4d6;
+/*-webkit-text-fill-color: #5ca4d6;*/
  -webkit-text-fill-width: 2px;
- -webkit-text-fill-color: #fff;
+ /*-webkit-text-fill-color: #fff;*/
 }
 
 
 .item:hover .fa-stop{
-  -webkit-text-fill-color: #60a7db;
+  /*-webkit-text-fill-color: #60a7db;
    -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: #fff;*/
 }
@@ -140,7 +140,7 @@ DROP-UP MENU
   transition-duration: 3s;
 }
 
-.dropup-content::after {
+.dropup-content:after {
   content: "";
   width: 0;
   height: 0;
