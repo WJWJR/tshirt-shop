@@ -110,6 +110,16 @@ DROP-UP MENU
   background-color: #60a7d8;
 }
 
+.shirt-sizes {
+  position: relative;
+  top:-64px;
+  text-align: center;
+  font-size: .8rem;
+}
+.dropup-content .mock img{
+  padding: 10px;
+}
+
 
  /* {
   background-color: #fff;
@@ -127,7 +137,7 @@ DROP-UP MENU
 
 .size .dropup-content {
   position: absolute;
-  top:-312px;
+  top:-482px;
   left: -2px;
   width: 82px;
   background-color: #fff;
