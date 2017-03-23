@@ -39,38 +39,18 @@ for (let i = 0; i < coloredShirts.length; i++) {
 }
 
 
-//  function myShirtSize(event) {
-  //  let "" = document.querySelector();
-//  }
+// SHOPPING CART SECTION
+function addToShoppingCartList (test){
+  let productList = document.querySelector('ul');
+  console.log(test);
+}
+addToShoppingCartList('This is working');
+let shoppingList = create
+productList.addEventListener('click', addToShoppingCartList)
 
 
-
-
-
-
-//var shirtSize = document.querySelector(".shirt-sizes");
-
-//for (i = 0; i < shirtSize.length; i++) {
-//  shirtSize[i].innerHTML = "javascriptRocks";
-//}
-
-//pickShirt.addEvntListener('click', pickShirt); }
-
-//function myShirtSize (){
-//console.log(myShirtSize);
-
-
-
-
-//function myfunction() {
-
-//}
-//.shirt-sizes.addEvntListener ('click');
-
-//var element = document.querySelector('.item-name');
-//element.textContent = "L";
-//console.log (element)
-
-
-//document.querySelector(".shirt-sizes")
-//document.querySelector(".item-name")
+//Save for lateron the right path
+// function addShoppingCart (event) {
+// let shoppingCartVisable = document.querySelector('#userCart')
+// let viewShoppingCart = document.create
+// }
