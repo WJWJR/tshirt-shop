@@ -29,7 +29,8 @@ img svg {
 MAIN STYLES
 =======================*/
 main {
-  width: 100%
+  /*width: 100%;*/
+  display: flex;
 }
 
 .product {
@@ -39,9 +40,9 @@ main {
 }
 
 .product, section, footer {
-  width: 33%;
+  width: 80%;
   height: auto;
-  padding: 0px
+  padding: 0px;
 }
 
 .flip {
