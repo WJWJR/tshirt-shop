@@ -44,9 +44,28 @@ function addToShoppingCartList (test){
   let productList = document.querySelector('ul');
   console.log(test);
 }
-addToShoppingCartList('This is working');
-let shoppingList = create
-productList.addEventListener('click', addToShoppingCartList)
+// addToShoppingCartList('This is working');
+// //let shoppingList = ;
+// productList.addEventListener('click', addToShoppingCartList)
+
+let itemClicked = document.querySelector('#userCart.item');
+itemClicked.addEventListener('click', shoppingCartClicked);
+let product = document.querySelector('.product-name');
+let price = document.querySelector('.price');
+let shoppingCartList = document.querySelectorAll('#shoppingCart li');
+let total = document.querySelector('span#total');
+let shirtColor = document.querySelectorAll('i.blue.purple')
+let combinedTotal = price + price;
+
+
+function shoppingCartClicked (){
+shoppingCartList[0].textContent = product.textContent + shirtColor.innerText +  price.textContent;
+total.textContent = price.textContent;
+
+// console.log(price.innerText);
+console.log(shirtColor);
+
+}
 
 
 //Save for lateron the right path
