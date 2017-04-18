@@ -1,196 +1,188 @@
-/*=======================
-GENERAL STYLES
-=======================*/
-* {
-  box-sizing: border-box;
-  color: #60a7d8;
-  font-size: 1.1rem;
-  font-family: 'Open Sans', sans-serif;
+body {
+  font-family: helvetica;
+  color: #72b9e6;
 }
-
-img {
-  width: 100%;
-  height: auto;
-  margin: 0px auto;
-  padding: 20px;
+.shirt {
+  margin-right: 2em;
 }
-
-/* Not sure why this is not working
-img svg {
-  width: 100%;
-  height: auto;
-  margin: 0px auto;
-  padding: 20px;
-}*/
-
-
-
-/*=======================
-MAIN STYLES
-=======================*/
-main {
-  width: 100%
+.flip-container, li, .fa-undo {
+  border: 1px solid #72b9e6;
 }
-
-.product {
-  border-top: 2px solid #60a7d8;
-  border-left: 2px solid #60a7d8;
-  border-right: 2px solid #60a7d8;
-}
-
-.product, section, footer {
-  width: 33%;
-  height: auto;
-  padding: 0px
-}
-
-.flip {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.flip:hover .fa {
-  background-color: #60a7d8;
-  -webkit-text-fill-color: #5ca4d6;
-   -webkit-text-fill-width: 2px;
-   -webkit-text-fill-color: #fff;
-}
-
-.fa-repeat {
-  border-bottom: 2px solid;
-  border-left: 2px solid;
-  padding: 10px;
-}
-
-section {
-  display: flex;
-}
-
-.item  {
-  width: 20%;
-  height: auto;
-  border: 2px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  cursor: pointer;
-  /*transition-duration: .5s;*/
-  position: relative;
-}
-
-footer {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.price {
-  font-weight: 600;
-}
-
-
-/*============================
-DROP-UP MENU
-=============================*/
-/*. {
-  position: relative;
+.shirt, .graphics, .text {
   display: inline-block;
-}*/
-
-.dropup-content {
-  display: none;*/
-  background-color: #fff;
-  border: 2px solid #60a7d8;
-  height: auto;
-  z-index: 1;
-  /*transition-duration: 3s;*/
 }
-.item:hover{
-  background-color: #60a7d8;
-}
-
-.shirt-sizes {
+.graphics {
   position: relative;
-  top:-64px;
+}
+.fa-undo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px;
+  border-top: 0;
+  border-right: 0;
+  z-index: 3;
+}
+.fa-undo:hover {
+  color: #fff;
+  background: #72b9e6;
+}
+.flip-container {
+  perspective: 1000px;
+  border-bottom: 0;
+}
+.flip-container.flip .image {
+  transform: rotateY(180deg);
+}
+.image {
+  height: 351px;
+  width: 360px;
+  padding: 20px;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.front {
+  z-index: 2;
+}
+.back {
+  transform: rotateY(180deg);
+}
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+li {
+  list-style-type: none;
   text-align: center;
-  font-size: .8rem;
+  flex: 1;
+  border: 1px solid;
+  padding: 27px 0;
+  position: relative;
 }
-.dropup-content .mock img{
-  padding: 10px;
-}
-
-
- /* {
-  background-color: #fff;
-}*/
-
-/*.arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid #fff;
+li .selector {
   position: absolute;
-  top: 90px;
-}*/
-
-.size .dropup-content {
-  position: absolute;
-  top:-482px;
-  left: -2px;
-  width: 82px;
-  background-color: #fff;
+  display: flex;
+  background: #fff;
+  border: 1px solid #72b9e6;
+  visibility: hidden;
+  opacity: 0;
+}
+li .sizes {
+  left: 5px;
+  bottom: 63px;
+  height: 14em;
+  width: 4em;
+  flex-direction: column;
+}
+li .colors {
+  left: -9px;
+  bottom: 73px;
+  height: 5em;
+  width: 6em;
+  flex-flow: row wrap;
+}
+.colors li {
+  margin: 5px;
+  flex-basis: calc(50% - 10px);
+  border: 0;
+  padding: 0;
+}
+.colors li:hover {
+  margin: 4px;
+  flex-basis: calc(50% - 8px);
+}
+.blue {
+  background: #72b9e6;
+}
+.pink, .colors .pink:hover {
+  background: #e460a5;
+}
+.yellow, .colors .yellow:hover {
+  background: #dbaa69;
+}
+.green, .colors .green:hover {
+  background: #347b30;
+}
+li:hover .selector {
+  visibility: visible;
+  color: #72b9e6;
+  opacity: 1;
+}
+.selector {
+  transition: all 1s;
+}
+.selector:hover {
+  visibility: visible;
+}
+.sizes:hover li {
+  color: #72b9e6;
+}
+.sizes li, .sizes:hover li {
+  border: 0;
+  padding: 15px;
+  background: url(./shirts/tshirt.svg) no-repeat;
+  background-size: 85%;
+  background-position: center center;
+  transition: background-size 1s;
+}
+.sizes li:hover {
+  background-size: 100%;
+}
+li:hover {
+  color: #fff;
+  background: #72b9e6;
+}
+.color {
+  width: 16px;
+  height: 16px;
+  margin: 0 27px;
+}
+li:hover .color {
+  border: 1px solid #fff;
+}
+.arrow-box {
+	position: relative;
+	background: #fff;
+	border: 4px solid #72b8e6;
+}
+.arrow-box:after, .arrow-box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
 }
 
-.colors .dropup-content {
-  position: absolute;
-  top: -92px;
-  left: -1px;
-  width: 82px;
-  background-color: #fff;
+.arrow-box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #fff;
+	border-width: 10px;
+	margin-left: -10px;
 }
-
-.dropset {
+.arrow-box:before {
+	border-color: rgba(114, 184, 230, 0);
+	border-top-color: #72b8e6;
+	border-width: 16px;
+	margin-left: -16px;
+}
+.text {
   display: flex;
   justify-content: space-between;
-  padding: 6px;
+  margin-top: 1em;
 }
-
-.drop-item .fa-stop {
-  font-size: 1.8rem;
-}
-
-.item:hover .dropup-content {
-  display: block;
-}
-
-.dropup-content::after {
-  color: #d48299;
-}
-/*=====================
-XL TSHIRT DROP-UP
-=======================*/
-/*.mock img{
-  width: 20%;
-}*/
-
-
-/*=====================
-.COLORS DROP-UP COLORS
-=====================*/
-.blue {
-  color: #;
-}
-
-.green {
-  color: #8bb992;
-}
-
-.item .purple {
-  color: #d48299;
-}
-
-.orange {
-  color: #dcb07d;
+.text h2 {
+  font-size: 100%;
+  font-weight: 400;
+  margin: 0;
 }
