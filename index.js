@@ -16,13 +16,19 @@ function makePink (event) {
 //Shopping Cart
 
 //add  products to the Shopping Cart
-$('#shopCart').on('click', addToCart);
-
+$('.shopCart').on('click', addToCart);
 
 function addToCart(){
-  console.log($(this).parent().next().text('clicked'));
-  let shirt = $('.shirt');
-  let price = $('.price')
+  //console.log($(this).parent().parent().parent().next().children().text());
+  let $shirt = $(this).parent().parent().parent().next().children('h2.shirt').text();
+  let $price = $(this).parent().parent().parent().next().find('span.price').text();
+  let $total = $(this).parent().parent().parent().next().find('span#total').text('asdasd');
+  let $li = $shirt + $price;
+  let $ul = $('#shoppingCart');
+  $ul.append(`<div>${$li}</div>`);
+  //let $totalPrice = $price + $price;
+
+
 }
 
 
