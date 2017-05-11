@@ -1,0 +1,196 @@
+/*=======================
+GENERAL STYLES
+=======================*/
+* {
+  box-sizing: border-box;
+  color: #60a7d8;
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+/* Not sure why this is not working
+img svg {
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+  padding: 20px;
+}*/
+
+
+
+/*=======================
+MAIN STYLES
+=======================*/
+main {
+  width: 100%
+}
+
+.product {
+  border-top: 2px solid #60a7d8;
+  border-left: 2px solid #60a7d8;
+  border-right: 2px solid #60a7d8;
+}
+
+.product, section, footer {
+  width: 33%;
+  height: auto;
+  padding: 0px
+}
+
+.flip {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flip:hover .fa {
+  background-color: #60a7d8;
+  -webkit-text-fill-color: #5ca4d6;
+   -webkit-text-fill-width: 2px;
+   -webkit-text-fill-color: #fff;
+}
+
+.fa-repeat {
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  padding: 10px;
+}
+
+section {
+  display: flex;
+}
+
+.item  {
+  width: 20%;
+  height: auto;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  /*transition-duration: .5s;*/
+  position: relative;
+}
+
+footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  font-weight: 600;
+}
+
+
+/*============================
+DROP-UP MENU
+=============================*/
+/*. {
+  position: relative;
+  display: inline-block;
+}*/
+
+.dropup-content {
+  display: none;*/
+  background-color: #fff;
+  border: 2px solid #60a7d8;
+  height: auto;
+  z-index: 1;
+  /*transition-duration: 3s;*/
+}
+.item:hover{
+  background-color: #60a7d8;
+}
+
+.shirt-sizes {
+  position: relative;
+  top:-64px;
+  text-align: center;
+  font-size: .8rem;
+}
+.dropup-content .mock img{
+  padding: 10px;
+}
+
+
+ /* {
+  background-color: #fff;
+}*/
+
+/*.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #fff;
+  position: absolute;
+  top: 90px;
+}*/
+
+.size .dropup-content {
+  position: absolute;
+  top:-482px;
+  left: -2px;
+  width: 82px;
+  background-color: #fff;
+}
+
+.colors .dropup-content {
+  position: absolute;
+  top: -92px;
+  left: -1px;
+  width: 82px;
+  background-color: #fff;
+}
+
+.dropset {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+}
+
+.drop-item .fa-stop {
+  font-size: 1.8rem;
+}
+
+.item:hover .dropup-content {
+  display: block;
+}
+
+.dropup-content::after {
+  color: #d48299;
+}
+/*=====================
+XL TSHIRT DROP-UP
+=======================*/
+/*.mock img{
+  width: 20%;
+}*/
+
+
+/*=====================
+.COLORS DROP-UP COLORS
+=====================*/
+.blue {
+  color: #;
+}
+
+.green {
+  color: #8bb992;
+}
+
+.item .purple {
+  color: #d48299;
+}
+
+.orange {
+  color: #dcb07d;
+}
