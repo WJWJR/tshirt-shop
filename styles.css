@@ -1,61 +1,17 @@
 body {
   font-family: helvetica;
   color: #72b9e6;
+  width: 80%;
+  margin: auto;
 }
 .shirt {
   margin-right: 2em;
 }
-
-/* Not sure why this is not working
-img svg {
-  width: 100%;
-  height: auto;
-  margin: 0px auto;
-  padding: 20px;
-}*/
-
-
-
-/*=======================
-MAIN STYLES
-=======================*/
-main {
-  /*width: 100%;*/
-  display: flex;
+.flip-container, li, .fa-undo {
+  border: 1px solid #72b9e6;
 }
-
-.product {
-  border-top: 2px solid #60a7d8;
-  border-left: 2px solid #60a7d8;
-  border-right: 2px solid #60a7d8;
-}
-
-.product, section, footer {
-  width: 80%;
-  height: auto;
-  padding: 0px;
-}
-
-.flip {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.flip:hover .fa {
-  background-color: #60a7d8;
-  -webkit-text-fill-color: #5ca4d6;
-   -webkit-text-fill-width: 2px;
-   -webkit-text-fill-color: #fff;
-}
-
-.fa-repeat {
-  border-bottom: 2px solid;
-  border-left: 2px solid;
-  padding: 10px;
-}
-
-section {
-  display: flex;
+.shirt, .graphics, .text {
+  display: inline-block;
 }
 .graphics {
   position: relative;
@@ -174,7 +130,7 @@ li:hover .selector {
 .sizes li, .sizes:hover li {
   border: 0;
   padding: 15px;
-  background: url(./shirts/tshirt.svg) no-repeat;
+  background: url(./images/tshirt.svg) no-repeat;
   background-size: 85%;
   background-position: center center;
   transition: background-size 1s;
@@ -235,4 +191,30 @@ li:hover .color {
 
 ul#shoppingCartli {
   border: none;
+}
+
+.shopItem {
+  border: none;
+  display: block;
+}
+
+
+#discount{
+  padding:20px;
+  margin: 20px;
+}
+
+#total{
+  padding:20px;
+  margin: 20px;
+}
+
+#newprice{
+  padding:20px;
+  margin: 20px;
+}
+
+#shoppingCart{
+  display: flex;
+  flex-direction: column;
 }

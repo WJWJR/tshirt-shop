@@ -17,19 +17,62 @@ function makePink (event) {
 
 //add  products to the Shopping Cart
 $('.shopCart').on('click', addToCart);
-
+function add(a,b) {
+  return a+b
+}
+let $prices = [];
 function addToCart(){
+  if ($prices.length <=7){
   //console.log($(this).parent().parent().parent().next().children().text());
   let $shirt = $(this).parent().parent().parent().next().children('h2.shirt').text();
   let $price = $(this).parent().parent().parent().next().find('span.price').text();
-  let $total = $(this).parent().parent().parent().next().find('span#total').text('asdasd');
-  let $li = $shirt + $price;
-  let $ul = $('#shoppingCart');
-  $ul.append(`<div>${$li}</div>`);
-  //let $totalPrice = $price + $price;
+  let $total = $('#total').text();
+  console.log($total);
 
+
+    let $allPrices = parseInt($price)
+    $prices.push($allPrices)
+    console.log($prices);
+    let $li = $shirt + $price;
+    let $ul = $('#shoppingCart');
+    $ul.append(`<div class="shopItem">${$li}</div>`);
+    //let $totalPrice = $price + $price;
+
+
+
+  let $totals = $prices.reduce(add, 0);
+  console.log($totals);
+$('#total').text($totals);
+
+if ($prices.length >= 5){
+  let total = $('#total').text()
+  let discount = total * .05
+  $('#discount').text('discount ' + discount)
+  console.log(total,discount)
+  let newprice = total - discount
+  $('#newprice').text('newprice ' + newprice)
+}
 
 }
+}
+
+// $('.shopCart').on('click', function() {
+//   if ($prices.length >= 5){
+//     let total = $('#total').text()
+//     let discount = total * .05
+//     $('#discount').text('discount ' + discount)
+//     console.log(total,discount)
+//     let newprice = total - discount
+//     $('#newprice').text('newprice ' + newprice)
+//   }
+// })
+
+// $('.shopCart').on('click', function() {
+//   if ($prices.length >=8){
+//
+//   }
+// })
+
 
 
 
